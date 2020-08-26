@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category Scriptlodge
+ * @package Scriptlodge_Promail
+ * @author Abdul Matin <khasru96@gmail.com >
+ * @copyright Copyright (c) 2018 Scriptlodge, Ltd (http://www.scriptlodge.com)
+ * @license http://opensource.org/licenses/afl-3.0.php Academic Free License (AFL 3.0)
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="promail_order_tracking" resource="sales" engine="innodb" comment="Sales Order">
+        <column xsi:type="int" name="entity_id" padding="11" unsigned="false" nullable="false" identity="true"
+                comment="Promail order tracking ID"/>
+        <column xsi:type="varchar" name="order_id" nullable="false" length="255" comment="Order Incremented Id"/>
+        <column xsi:type="varchar" name="tracking" nullable="true" length="255" comment="Order tracking Id"/>
+        <column xsi:type="varchar" name="shipping_method" nullable="true" length="255" comment="Order shipping method"/>
+        <column xsi:type="float" name="total_amount" nullable="true"  comment="Order Amount"/>
+        <column xsi:type="smallint" name="store_id" padding="5" unsigned="true" nullable="false" identity="false"
+                default="0" comment="Store ID"/>
+        <column xsi:type="varchar" name="status" nullable="true" length="255" comment="Status"/>
+        <column xsi:type="timestamp" name="created_at" nullable="false" default="CURRENT_TIMESTAMP" on_update="false"
+                comment="Created Datetime"/>
+        <column xsi:type="timestamp" name="updated_at" nullable="false" default="CURRENT_TIMESTAMP" on_update="true"
+                comment="Updated Datetime"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+    </table>
+</schema>

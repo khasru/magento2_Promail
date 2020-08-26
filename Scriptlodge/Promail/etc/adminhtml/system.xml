@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<section id="promail" type="text" sortOrder="1000" showInDefault="1" showInWebsite="1" showInStore="1">
+			<label>Promail Tracking</label>
+			<tab>sales</tab>
+            <resource>Scriptlodge_Promail::config_promail</resource>
+			<group id="general" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label">
+				<label><![CDATA[General]]></label>
+                <field id="enabled" translate="label" type="select" sortOrder="0" showInDefault="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+				<field id="api_key" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="1" translate="label" type="text">
+					<label>Api Key</label>
+				</field>
+                <field id="privat_key" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="2" translate="label" type="text">
+                    <label>Privat Key</label>
+                </field>
+                <field id="email" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="3" translate="label" type="text">
+                    <label>Email</label>
+                    <validate>validate-email</validate>
+                </field>
+			</group>
+		</section>
+	</system>
+</config>

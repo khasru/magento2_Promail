@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Scriptlodge\Promail\Api\PromailTrackingRepositoryInterface"
+                type="Scriptlodge\Promail\Model\PromailTrackingRepository"/>
+    <preference for="Scriptlodge\Promail\Api\Data\PromailTrackingInterface"
+                type="Scriptlodge\Promail\Model\PromailTracking"/>
+</config>

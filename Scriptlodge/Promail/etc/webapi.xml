@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+     <route method="POST" url="/V1/promailtracking">
+        <service class="Scriptlodge\Promail\Api\PromailTrackingRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+    </route>
+
+    <route method="PUT" url="/V1/promailtracking">
+        <service class="Scriptlodge\Promail\Api\PromailTrackingRepositoryInterface" method="update"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+    </route>
+
+   <route method="GET" url="/V1/promailtracking/:promailTrackingId">
+        <service class="Scriptlodge\Promail\Api\PromailTrackingRepositoryInterface" method="get"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+    </route>
+
+    <route method="DELETE" url="/V1/promailtracking/:promailTrackingId">
+        <service class="Scriptlodge\Promail\Api\PromailTrackingRepositoryInterface" method="deleteById"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+    </route>
+
+    <route method="GET" url="/V1/promailtracking">
+        <service class="Scriptlodge\Promail\Api\PromailTrackingRepositoryInterface" method="getList"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+</routes>
