@@ -1,4 +1,4 @@
-# magento2_Promail
+# Magento2.x +  Promail 
 
 Promail REST API 2.0 is a simple way to exchange and edit data with the Promail platform. Orders can be sent to Promail with the Order API.
 
